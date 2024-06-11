@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- start hero section -->
+<section class="section pb-0 hero-section" id="hero">
+    <div class="bg-overlay bg-overlay-pattern"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-sm-10">
+                <div class="text-center mt-lg-5 pt-5">
+                    <h1 class="display-6 fw-semibold mb-3 lh-base">Bienvenu sur notre outil de <span
+                            class="text-success">Gestion De Paiment </span> des frais accademique</h1>
+                    <p class="lead text-muted lh-base">Notre système offre une solution simple et sécurisée pour gérer
+                        les paiements des frais académiques. Avec des fonctionnalités telles que le suivi des paiements,
+                        les notifications de paiement et bien plus encore, nous rendons la gestion des frais académiques
+                        facile et sans stress.</p>
+
+                    <!-- Boutons -->
+                    <div class="d-flex gap-2 justify-content-center mt-4">
+                        <a href="/login" class="btn btn-primary">Connexion<i
+                                class="ri-arrow-right-line align-middle ms-1"></i></a>
+
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#infoModal">
+                            En savoir plus <i class="ri-eye-line align-middle ms-1"></i></button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="infoModalLabel">Informations sur notre application</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Fermer"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Ici, vous pouvez ajouter toutes les informations sur votre application qui gère
+                                        les paiements des frais académiques.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+    <!-- end shape -->
+</section>
+<!-- end hero section -->
+
+{% endblock %}

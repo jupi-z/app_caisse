@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="light" data-sidebar-size="lg"
+      data-sidebar-image="none" data-preloader="disable">
+
+<head>
+
+    <meta charset="utf-8"/>
+    <title>Landing | Velzon - Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description"/>
+    <meta content="Themesbrand" name="author"/>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../static/assets/images/favicon.ico">
+
+    <!--Swiper slider css-->
+    <link href="../static/assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Layout config Js -->
+    <script src="../static/assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="../static/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Icons Css -->
+    <link href="../static/assets/css/icons.min.css" rel="stylesheet" type="text/css"/>
+    <!-- App Css-->
+    <link href="../static/assets/css/app.min.css" rel="stylesheet" type="text/css"/>
+    <!-- custom Css-->
+    <link href="../static/assets/css/custom.min.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
+
+<div class="layout-wrapper landing ">
+    <nav class="navbar navbar-expand-lg navbar-landing fixed-top" id="navbar">
+        <div class="container">
+
+            <button class="navbar-toggler py-0 fs-20 text-body" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <i class="mdi mdi-menu"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mt-2 mt-lg-0" id="navbar-example">
+                    <li class="nav-item">
+                        <a class="nav-link fs-15 active" href="/">Acceuil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-15" href="/fees">Frais</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-15" href="/payment">Paiement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-15" href="/history">Historique</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-15" href="/notifications">Notifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-15" href="/refunds">Remboursements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-15" href="/student_data">Données étudiant</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-15" href="/reports">Rapports</a>
+                    </li>
+                </ul>
+
+                <div class="">
+                    <a href="/login" class="btn btn-primary">Login<i
+                            class="ri-arrow-right-line align-middle ms-1"></i></a>
+
+                    <a href="/register" class="btn btn-danger">Register<i
+                            class="ri-arrow-right-line align-middle ms-1"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+    </nav>
+    <!-- end navbar -->
+    <div class="vertical-overlay" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent.show"></div>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- Start footer -->
+    <footer class="custom-footer bg-dark py-5 position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div>
+                        <div>
+                            <img src="../static/assets/images/logo-light.png" alt="logo light" height="17">
+                        </div>
+                        <div class="mt-4 fs-13">
+                            <p>Premium Multipurpose Admin & Dashboard Template</p>
+                            <p class="ff-secondary">You can build any type of web application like eCommerce, CRM, CMS,
+                                Project
+                                management apps, Admin Panels, etc using Velzon.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 ms-lg-auto">
+                    <div class="row">
+                        <div class="col-sm-4 mt-4">
+                            <h5 class="text-white mb-0">Company</h5>
+                            <div class="text-muted mt-3">
+                                <ul class="list-unstyled ff-secondary footer-list fs-14">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Gallery</a></li>
+                                    <li><a href="#">Projects</a></li>
+                                    <li><a href="#">Timeline</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 mt-4">
+                            <h5 class="text-white mb-0">Apps Pages</h5>
+                            <div class="text-muted mt-3">
+                                <ul class="list-unstyled ff-secondary footer-list fs-14">
+                                    <li><a href="#">Calendar</a></li>
+                                    <li><a href="#">Mailbox</a></li>
+                                    <li><a href="#">Chat</a></li>
+                                    <li><a href="#">Deals</a></li>
+                                    <li><a href="#">Kanban Board</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 mt-4">
+                            <h5 class="text-white mb-0">Support</h5>
+                            <div class="text-muted mt-3">
+                                <ul class="list-unstyled ff-secondary footer-list fs-14">
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row text-center text-sm-start align-items-center mt-5">
+                <div class="col-sm-6">
+
+                    <div>
+                        <p class="copy-rights mb-0">
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                            © Velzon - Themesbrand
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="text-sm-end mt-3 mt-sm-0">
+                        <ul class="list-inline mb-0 footer-social-link">
+                            <li class="list-inline-item">
+                                <a href="javascript: void(0);" class="avatar-xs d-block">
+                                    <div class="avatar-title rounded-circle">
+                                        <i class="ri-facebook-fill"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="javascript: void(0);" class="avatar-xs d-block">
+                                    <div class="avatar-title rounded-circle">
+                                        <i class="ri-github-fill"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="javascript: void(0);" class="avatar-xs d-block">
+                                    <div class="avatar-title rounded-circle">
+                                        <i class="ri-linkedin-fill"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="javascript: void(0);" class="avatar-xs d-block">
+                                    <div class="avatar-title rounded-circle">
+                                        <i class="ri-google-fill"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="javascript: void(0);" class="avatar-xs d-block">
+                                    <div class="avatar-title rounded-circle">
+                                        <i class="ri-dribbble-line"></i>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+<!-- JAVASCRIPT -->
+<script src="../static/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../static/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="../static/assets/libs/node-waves/waves.min.js"></script>
+<script src="../static/assets/libs/feather-icons/feather.min.js"></script>
+<script src="../static/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+<script src="../static/assets/js/plugins.js"></script>
+
+<!--Swiper slider js-->
+<script src="../static/assets/libs/swiper/swiper-bundle.min.js"></script>
+
+<!-- landing init -->
+<script src="../static/assets/js/pages/landing.init.js"></script>
