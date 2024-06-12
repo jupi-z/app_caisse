@@ -1,7 +1,32 @@
-{% extends 'base.html' %}
+<!doctype html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="light" data-sidebar-size="lg"
+      data-sidebar-image="none" data-preloader="disable">
 
-{% block content %}
+<head>
 
+    <meta charset="utf-8"/>
+    <title>Connexion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description"/>
+    <meta content="Themesbrand" name="author"/>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../static/assets/images/favicon.ico">
+
+    <!-- Layout config Js -->
+    <script src="../static/assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="../static/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Icons Css -->
+    <link href="../static/assets/css/icons.min.css" rel="stylesheet" type="text/css"/>
+    <!-- App Css-->
+    <link href="../static/assets/css/app.min.css" rel="stylesheet" type="text/css"/>
+    <!-- custom Css-->
+    <link href="../static/assets/css/custom.min.css" rel="stylesheet" type="text/css"/>
+
+
+</head>
+
+<body>
 
 <div class="auth-page-wrapper pt-5">
     <!-- auth page bg -->
@@ -43,22 +68,24 @@
                                 <p class="text-muted">Sign in to continue to Velzon.</p>
                             </div>
                             <div class="p-2 mt-4">
-                                <form action="index.html">
 
+                                {% if error %}
+                                <p style="color: red">{{ error }}</p>
+                                {% endif %}
+
+                                <form method="POST" action="/login">
                                     <div class="mb-3">
-                                        <label for="username" class="form-label">Username</label>
-                                        <input type="text" class="form-control" id="username"
-                                               placeholder="Enter username">
+                                        <label for="username" class="form-label">Nom d'utilisateur</label>
+                                        <input type="text" name="username" class="form-control" id="username"
+                                               placeholder="Enter username" required>
                                     </div>
 
                                     <div class="mb-3">
-                                        <div class="float-end">
-                                            <a href="auth-pass-reset-basic.html" class="text-muted">Forgot password?</a>
-                                        </div>
-                                        <label class="form-label" for="password-input">Password</label>
+                                        <label class="form-label" for="password">Mot de passe</label>
                                         <div class="position-relative auth-pass-inputgroup mb-3">
-                                            <input type="password" class="form-control pe-5 password-input"
-                                                   placeholder="Enter password" id="password-input">
+                                            <input type="password" name="password"
+                                                   class="form-control pe-5 password-input" placeholder="Enter password"
+                                                   id="password" required>
                                             <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
                                                     type="button" id="password-addon"><i
                                                     class="ri-eye-fill align-middle"></i></button>
@@ -72,13 +99,11 @@
                                     </div>
 
                                     <div class="mt-4">
-                                        <button class="btn btn-success w-100" type="submit">Sign In</button>
+                                        <button class="btn btn-success w-100" type="submit">Connexion</button>
                                     </div>
 
                                     <div class="mt-4 text-center">
-                                        <div class="signin-other-title">
-                                            <h5 class="fs-13 mb-4 title">Sign In with</h5>
-                                        </div>
+                                        <h5 class="fs-13 mb-4 title">Se connecter avec</h5>
                                         <div>
                                             <button type="button"
                                                     class="btn btn-primary btn-icon waves-effect waves-light"><i
@@ -95,6 +120,19 @@
                                         </div>
                                     </div>
                                 </form>
+
+                                <script>
+                                    document.getElementById('password-addon').addEventListener('click', function () {
+                                        var passwordInput = document.getElementById('password');
+                                        if (passwordInput.type === "password") {
+                                            passwordInput.type = "text";
+                                        } else {
+                                            passwordInput.type = "password";
+                                        }
+                                    });
+                                </script>
+
+
                             </div>
                         </div>
                         <!-- end card body -->
@@ -102,9 +140,9 @@
                     <!-- end card -->
 
                     <div class="mt-4 text-center">
-                        <p class="mb-0">Don't have an account ? <a href="auth-signup-basic.html"
+                        <p class="mb-0">Vous n'avez pas de compte ? <a href="/register"
                                                                    class="fw-semibold text-primary text-decoration-underline">
-                            Signup </a></p>
+                            S'incrire </a></p>
                     </div>
 
                 </div>
@@ -115,7 +153,39 @@
     </div>
     <!-- end auth page content -->
 
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <p class="mb-0 text-muted">&copy;
+                            <script>document.write(new Date().getFullYear())</script>
+                            Velzon. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end Footer -->
 </div>
 <!-- end auth-page-wrapper -->
 
-{% endblock %}
+<!-- JAVASCRIPT -->
+<script src="../static/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../static/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="../static/assets/libs/node-waves/waves.min.js"></script>
+<script src="../static/assets/libs/feather-icons/feather.min.js"></script>
+<script src="../static/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+<script src="../static/assets/js/plugins.js"></script>
+
+<!-- particles js -->
+<script src="../static/assets/libs/particles.js/particles.js"></script>
+<!-- particles app js -->
+<script src="../static/assets/js/pages/particles.app.js"></script>
+<!-- password-addon init -->
+<script src="../static/assets/js/pages/password-addon.init.js"></script>
+</body>
+
+</html>

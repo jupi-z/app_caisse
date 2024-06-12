@@ -1,94 +1,67 @@
-{% extends 'base.html' %}
+{% extends 'base_2.html' %}
 
 {% block content %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+            <h4 class="mb-sm-0">liste des frais accadémique</h4>
 
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">Gestion Caisse</a></li>
+                    <li class="breadcrumb-item active">Frais accadémique</li>
+                </ol>
+            </div>
 
-<div class="table-responsive table-card">
-    <table class="table table-nowrap table-striped-columns mb-0">
-        <thead class="table-light">
-        <tr>
-            <th scope="col">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="cardtableCheck">
-                    <label class="form-check-label" for="cardtableCheck"></label>
-                </div>
-            </th>
-            <th scope="col">Id</th>
-            <th scope="col">Name</th>
-            <th scope="col">Date</th>
-            <th scope="col">Total</th>
-            <th scope="col">Status</th>
-            <th scope="col">Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="cardtableCheck01">
-                    <label class="form-check-label" for="cardtableCheck01"></label>
-                </div>
-            </td>
-            <td><a href="#" class="fw-semibold">#VL2110</a></td>
-            <td>William Elmore</td>
-            <td>07 Oct, 2021</td>
-            <td>$24.05</td>
-            <td><span class="badge bg-success">Paid</span></td>
-            <td>
-                <button type="button" class="btn btn-sm btn-light">Details</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="cardtableCheck02">
-                    <label class="form-check-label" for="cardtableCheck02"></label>
-                </div>
-            </td>
-            <td><a href="#" class="fw-semibold">#VL2109</a></td>
-            <td>Georgie Winters</td>
-            <td>07 Oct, 2021</td>
-            <td>$26.15</td>
-            <td><span class="badge bg-success">Paid</span></td>
-            <td>
-                <button type="button" class="btn btn-sm btn-light">Details</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="cardtableCheck03">
-                    <label class="form-check-label" for="cardtableCheck03"></label>
-                </div>
-            </td>
-            <td><a href="#" class="fw-semibold">#VL2108</a></td>
-            <td>Whitney Meier</td>
-            <td>06 Oct, 2021</td>
-            <td>$21.25</td>
-            <td><span class="badge bg-danger">Refund</span></td>
-            <td>
-                <button type="button" class="btn btn-sm btn-light">Details</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="cardtableCheck04">
-                    <label class="form-check-label" for="cardtableCheck04"></label>
-                </div>
-            </td>
-            <td><a href="#" class="fw-semibold">#VL2107</a></td>
-            <td>Justin Maier</td>
-            <td>05 Oct, 2021</td>
-            <td>$25.03</td>
-            <td><span class="badge bg-success">Paid</span></td>
-            <td>
-                <button type="button" class="btn btn-sm btn-light">Details</button>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+        </div>
+    </div>
 </div>
+<!-- end page title -->
+
+
+<!-- Striped Rows -->
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Customer</th>
+        <th scope="col">Date</th>
+        <th scope="col">Invoice</th>
+        <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">1</th>
+        <td>Bobby Davis</td>
+        <td>Nov 14, 2021</td>
+        <td>$2,410</td>
+        <td><span class="badge badge-soft-success">Confirmed</span></td>
+    </tr>
+    <tr>
+        <th scope="row">2</th>
+        <td>Christopher Neal</td>
+        <td>Nov 21, 2021</td>
+        <td>$1,450</td>
+        <td><span class="badge badge-soft-warning">Waiting</span></td>
+    </tr>
+    <tr>
+        <th scope="row">3</th>
+        <td>Monkey Karry</td>
+        <td>Nov 24, 2021</td>
+        <td>$3,500</td>
+        <td><span class="badge badge-soft-success">Confirmed</span></td>
+    </tr>
+    <tr>
+        <th scope="row">4</th>
+        <td>Aaron James</td>
+        <td>Nov 25, 2021</td>
+        <td>$6,875</td>
+        <td><span class="badge badge-soft-danger">Cancelled</span></td>
+    </tr>
+    </tbody>
+</table>
 
 
 {% endblock %}
