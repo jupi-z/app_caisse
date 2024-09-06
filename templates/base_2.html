@@ -840,27 +840,18 @@
                             <a class="dropdown-item" href="#"><i
                                     class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span
                                     class="align-middle">Profile</span></a>
-                            <a class="dropdown-item" href="#"><i
-                                    class="mdi mdi-message-text-outline text-muted fs-16 align-middle me-1"></i> <span
-                                    class="align-middle">Messages</span></a>
-                            <a class="dropdown-item" href="#"><i
-                                    class="mdi mdi-calendar-check-outline text-muted fs-16 align-middle me-1"></i> <span
-                                    class="align-middle">Taskboard</span></a>
-                            <a class="dropdown-item" href="#"><i
-                                    class="mdi mdi-lifebuoy text-muted fs-16 align-middle me-1"></i> <span
-                                    class="align-middle">Help</span></a>
+
+
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"><i
-                                    class="mdi mdi-wallet text-muted fs-16 align-middle me-1"></i> <span
-                                    class="align-middle">Balance : <b>$5971.67</b></span></a>
+
+
                             <a class="dropdown-item" href="#"><span
                                     class="badge bg-soft-success text-success mt-1 float-end">New</span><i
                                     class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i> <span
                                     class="align-middle">Settings</span></a>
-                            <a class="dropdown-item" href="#"><i
-                                    class="mdi mdi-lock text-muted fs-16 align-middle me-1"></i> <span
-                                    class="align-middle">Lock screen</span></a>
-                            <a class="dropdown-item" href="#"><i
+
+
+                            <a class="dropdown-item" href="/logout"><i
                                     class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span
                                     class="align-middle" data-key="t-logout">Logout</span></a>
                         </div>
@@ -936,58 +927,33 @@
                 <ul class="navbar-nav" id="navbar-nav">
                     <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                     <li class="nav-item">
-                        <a class="nav-link menu-link" href="/">
+                        <a class="nav-link menu-link" href="/dashboard">
                             <i data-feather="home" class="icon-dual"></i> <span
-                                data-key="t-dashboards">Acceuil</span>
+                                data-key="t-dashboards">Tableau de bord</span>
                         </a>
                     </li>
                     <!-- end Dashboard Menu -->
 
-                    <li class="nav-item">
-                        <a class="nav-link menu-link" href="/fees">
-                            <i data-feather="dollar-sign" class="icon-dual"></i> <span data-key="t-apps">Frais</span>
+                     <li class="nav-item">
+                        <a class="nav-link menu-link" href="/manage">
+                            <i data-feather="save" class="icon-dual"></i> <span data-key="t-layouts">Gestion</span>
                         </a>
-                    </li>
+                    </li> <!-- end Dashboard Menu -->
+
 
                     <li class="nav-item">
                         <a class="nav-link menu-link" href="/payment">
                             <i data-feather="credit-card" class="icon-dual"></i> <span
                                 data-key="t-layouts">Paiement</span>
-                            <span class="badge badge-pill bg-danger" data-key="t-hot">en cours</span>
-                        </a>
-                    </li> <!-- end Dashboard Menu -->
-
-                    <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-pages"></span></li>
-
-                    <li class="nav-item">
-                        <a class="nav-link menu-link" href="/history">
-                            <i data-feather="clock" class="icon-dual"></i> <span data-key="t-layouts">Historique</span>
-                        </a>
-                    </li> <!-- end Dashboard Menu -->
-
-
-                    <li class="nav-item">
-                        <a class="nav-link menu-link" href="/refunds">
-                            <i data-feather="rotate-ccw" class="icon-dual"></i> <span data-key="t-layouts">Remboursements</span>
-                        </a>
-                    </li> <!-- end Dashboard Menu -->
-
-
-                    <li class="nav-item">
-                        <a class="nav-link menu-link" href="/reports">
-                            <i data-feather="file-text" class="icon-dual"></i> <span
-                                data-key="t-layouts">Rapports</span>
+                            <span class="badge badge-pill bg-success" data-key="t-hot">en cours</span>
                         </a>
                     </li> <!-- end Dashboard Menu -->
 
                     <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-pages"></span></li>
 
 
-                    <li class="nav-item">
-                        <a class="nav-link menu-link" href="/notifications">
-                            <i data-feather="save" class="icon-dual"></i> <span data-key="t-layouts">Gestion</span>
-                        </a>
-                    </li> <!-- end Dashboard Menu -->
+                    <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-pages"></span></li>
+
 
 
                     <li class="nav-item">

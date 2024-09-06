@@ -1,0 +1,101 @@
+{% extends 'base_2.html' %}
+
+{% block content %}
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+            <h4 class="mb-sm-0">Gestion des frais académiques</h4>
+
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">Gestion Caisse</a></li>
+                    <li class="breadcrumb-item active">Gestion</li>
+                </ol>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Ajouter un nouveau frais</h4>
+                <p class="card-title-desc">Veuillez remplir le formulaire ci-dessous pour ajouter un nouveau frais.</p>
+
+                <form action="/manage/add_fee" method="post">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nom du frais</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="amount" class="form-label">Montant du frais</label>
+                                <input type="number" class="form-control" id="amount" name="amount" min="10000" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="due_date" class="form-label">Date d'échéance</label>
+                                <input type="date" class="form-control" id="due_date" name="due_date" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Description</label>
+                                <textarea class="form-control" id="description" name="description" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Liste des frais</h4>
+                <p class="card-title-desc">Voici la liste des frais académiques.</p>
+
+                <table class="table table-bordered dt-responsive nowrap"
+                       style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                    <thead>
+                    <tr>
+                        <th>Nom du frais</th>
+                        <th>Montant du frais</th>
+                        <th>Date d'échéance</th>
+                        <th>Description</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for fee in fees %}
+                    <tr>
+                        <td>{{ fee.nom }}</td>
+                        <td>{{ fee.montant }}</td>
+                        <td>{{ fee.date_echeance }}</td>
+                        <td>{{ fee.description }}</td>
+                        <td>
+                            <a href="/manage/edit_fee/{{ fee.id }}" class="btn btn-primary btn-sm">Modifier</a>
+                            <a href="/manage/delete_fee/{{ fee.id }}" class="btn btn-danger btn-sm">Supprimer</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

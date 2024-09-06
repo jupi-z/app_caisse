@@ -1,58 +1,44 @@
-CREATE TABLE User (
+-- Table Utilisateur
+CREATE TABLE Utilisateur (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL
+    nom VARCHAR(255) NOT NULL,
+    prenom VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    mot_de_passe VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE Fee (
+-- Table Étudiant
+CREATE TABLE Etudiant (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    amount DECIMAL(10, 2) NOT NULL
+    nom VARCHAR(255) NOT NULL,
+    prenom VARCHAR(255) NOT NULL,
+    matricule VARCHAR(255) NOT NULL UNIQUE,
+    niveau VARCHAR(255) NOT NULL,
+    filiere VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    telephone VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE Payment (
+-- Table Frais
+CREATE TABLE Frais (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    fee_id INT NOT NULL,
-    amount DECIMAL(10, 2) NOT NULL,
-    date_paid DATETIME NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES User(id),
-    FOREIGN KEY (fee_id) REFERENCES Fee(id)
+    nom VARCHAR(255) NOT NULL,
+    montant DECIMAL(10, 2) NOT NULL,
+    date_echeance DATE NOT NULL,
+    description TEXT
 );
 
-CREATE TABLE Notification (
+-- Table Paiement
+CREATE TABLE Paiement (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    message TEXT NOT NULL,
-    date_created DATETIME NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES User(id)
-);
-
-CREATE TABLE Refund (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    amount DECIMAL(10, 2) NOT NULL,
-    date_requested DATETIME NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES User(id)
-);
-
-CREATE TABLE Scholarship (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    description TEXT NOT NULL,
-    amount DECIMAL(10, 2) NOT NULL
-);
-
-CREATE TABLE StudentData (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    data TEXT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES User(id)
-);
-
-CREATE TABLE Report (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    content TEXT NOT NULL
+    etudiant_id INT NOT NULL,
+    frais_id INT NOT NULL,
+    montant DECIMAL(10, 2) NOT NULL,
+    date_paiement DATETIME NOT NULL,
+    mode_paiement VARCHAR(255) NOT NULL,
+    reference_paiement VARCHAR(255) NOT NULL,
+    utilisateur_id INT NOT NULL,
+    FOREIGN KEY (etudiant_id) REFERENCES Etudiant(id),
+    FOREIGN KEY (frais_id) REFERENCES Frais(id),
+    FOREIGN KEY (utilisateur_id) REFERENCES Utilisateur(id)
 );

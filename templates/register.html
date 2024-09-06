@@ -69,8 +69,24 @@
                             </div>
                             <div class="p-2 mt-4">
 
-
                                 <form class="needs-validation" novalidate method="POST" action="/register">
+                                    <div class="mb-3">
+                                        <label for="nom" class="form-label">Nom <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="nom" name="nom"
+                                               placeholder="Enter your name" required>
+                                        <div class="invalid-feedback">
+                                            Entrez votre nom
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="prenom" class="form-label">Prénom <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="prenom" name="prenom"
+                                               placeholder="Enter your last name" required>
+                                        <div class="invalid-feedback">
+                                            Entrez votre prénom
+                                        </div>
+                                    </div>
                                     <div class="mb-3">
                                         <label for="useremail" class="form-label">Email <span
                                                 class="text-danger">*</span></label>
@@ -78,15 +94,6 @@
                                                placeholder="Enter email address" required>
                                         <div class="invalid-feedback">
                                             Entrez votre adresse Email
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="username" class="form-label">nom d'utilisateur <span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" name="username" id="username"
-                                               placeholder="Enter username" required>
-                                        <div class="invalid-feedback">
-                                            Entrez votre nom d'utilisateur
                                         </div>
                                     </div>
 
@@ -146,7 +153,6 @@
                                         </div>
                                     </div>
                                 </form>
-
                                 <script>
                                     document.getElementById('password-addon').addEventListener('click', function () {
                                         var passwordInput = document.getElementById('password');
@@ -166,7 +172,7 @@
 
                     <div class="mt-4 text-center">
                         <p class="mb-0">Vous avez déjà un compte ? <a href="/login"
-                                                                     class="fw-semibold text-primary text-decoration-underline">
+                                                                      class="fw-semibold text-primary text-decoration-underline">
                             se connecter </a></p>
                     </div>
 
@@ -194,8 +200,7 @@
         </div>
     </footer>
     <!-- end Footer -->
-</div>
-<!-- end auth-page-wrapper -->
+</div><!-- end auth-page-wrapper -->
 
 <!-- JAVASCRIPT -->
 <script src="../static/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
